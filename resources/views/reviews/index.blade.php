@@ -49,7 +49,7 @@
                                 <div class="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
                                 <div class="col-span-1 flex items-center">
                                     <p class="text-sm font-medium text-black dark:text-white">
-                                    {{ $review['id'] }}
+                                    {{ $review->id }}
                                         </p>
                                     </div>
                                     <div class="col-span-2 flex items-center">
@@ -58,23 +58,23 @@
                                             <img src="src/images/movie/{{ $review['poster'] }}" alt="Product" />
                                             </div>
                                             <p class="text-sm font-medium text-black dark:text-white">
-                                            {{ $review['movie'] }}
+                                            {{ $review->title }}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="col-span-1 items-center sm:flex">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                        {{ $review['User'] }}
+                                        {{ $review->user }}
                                         </p>
                                     </div>
                                     <div class="col-span-1 flex items-center">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                        {{ $review['Rating'] }}
+                                        {{ $review->rating }}
                                         </p>
                                     </div>
                                     <div class="col-span-1 flex items-center">
                                         <p class="text-sm font-medium text-black dark:text-white">
-                                        {{ $review['Date'] }}
+                                        {{ $review->date }}
                                         </p>
                                     </div>
                                     <div class="col-span-1 flex items-center">

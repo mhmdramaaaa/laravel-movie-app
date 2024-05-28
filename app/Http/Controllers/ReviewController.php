@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use App\Http\Controllers;
 use Illuminate\Http\Request;
+
 
 class ReviewController extends Controller
 {
-    public function index ()
+    public function index()
     {
-        $review = new Review();
-        $reviews = $review->getAllReviews();
+        
+        // $reviews = Review::all();
+       $reviews =  Review::All();
 
-        return view('reviews.index', ['reviews' => $reviews]);
+        return view('reviews.index', compact('reviews'));
     }
 }
