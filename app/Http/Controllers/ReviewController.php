@@ -6,15 +6,40 @@ use App\Models\Review;
 use App\Http\Controllers;
 use Illuminate\Http\Request;
 
-
 class ReviewController extends Controller
 {
     public function index()
     {
-        
-        // $reviews = Review::all();
-       $reviews =  Review::All();
 
-        return view('reviews.index', compact('reviews'));
+        $reviews = Review::all();
+
+    return view('reviews.index', compact('reviews'));
+    }
+
+    public function create()
+    {
+        $reviews= Review::all();
+        return view('reviews.create', compact('reviews'));
+    }
+
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'poster' => 'required',
+            'user' => 'required',
+            'rating' => 'required',
+            'date' => 'required',
+        ]);
+    
+        Review::create($validatedData);
+    
+        return redirect('/reviews')->with('success', 'Review added successfully!');
+    }
+
+    public function destroy(Review $review)
+    {
+        $review->delete();
+        return redirect('/reviews')->with('success', 'Review deleted successfully!');
     }
 }

@@ -15,15 +15,13 @@ class ReviewSeeder extends Seeder
     {
         
         Review::create([
-            'movie_id' => '1',
-            'title' => 'Jojo Bizarre Adventure',
+            'title' => 'Jojo Adventure',
             'poster' => 'movie-01.jpg',
             'User' => 'Sutando Tsukai',
             'Rating' => '4/5',
             'Date' => '26 November 2007'
         ]);
         Review ::create([
-            'movie_id' => '2',
             'title' => 'Noragami',
             'poster' => 'movie-02.jpg',
             'User' => 'Yato',
@@ -32,7 +30,6 @@ class ReviewSeeder extends Seeder
             
         ]);
         Review::create([
-            'movie_id' => '3',
             'title' => 'Wind Breaker',
             'poster' => 'movie-03.jpg',
             'User' => 'Yongseok Jo',
@@ -40,15 +37,13 @@ class ReviewSeeder extends Seeder
             'Date' => '4 April 2024'
         ]);
         Review::create([
-            'movie_id' => '4',
-            'title' => 'Spy X Family',
+            'title' => 'SPY X Family',
             'poster' => 'movie-04.jpg',
             'User' => 'Loid Forger',
             'Rating' => '4,5/5',
             'Date' => '7 Oktober 2023'
         ]);
         Review::create([
-            'movie_id' => '5',
             'title' => 'Naruto',
             'poster' => 'movie-5.jpg',
             'User' => 'Uzumaki',
