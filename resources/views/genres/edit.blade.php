@@ -74,7 +74,7 @@
                             </div>
 
                             <div class="mb-4.5">
-                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> Name <span class="text-meta-1">*</span> </label>
+                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> Description <span class="text-meta-1">*</span> </label>
                                 <input
                                     id="description"
                                     name="description"
